@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 430" role="img" aria-labelledby="title desc">
+  <title id="title">多层感知机实现 XOR</title>
+  <desc id="desc">输入 x1 和 x2 同时进入 NAND 与 OR，两个中间结果再进入 AND，得到 XOR 输出。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#64748b"/>
+    </marker>
+    <style>
+      .card { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 2; }
+      .gate { fill: #ffffff; stroke: #8b5cf6; stroke-width: 3; }
+      .final { fill: #fff7ed; stroke: #f59e0b; stroke-width: 3; }
+      .wire { fill: none; stroke: #64748b; stroke-width: 4; marker-end: url(#arrow); }
+      .label { fill: #0f172a; font: 700 24px system-ui, sans-serif; text-anchor: middle; dominant-baseline: central; }
+      .small { fill: #475569; font: 18px system-ui, sans-serif; text-anchor: middle; }
+      .layer { fill: #64748b; font: 18px system-ui, sans-serif; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect width="1100" height="430" rx="24" fill="#eef2f7"/>
+  <rect class="card" x="25" y="25" width="1050" height="340" rx="20"/>
+
+  <circle cx="105" cy="135" r="38" fill="#dbeafe" stroke="#3b82f6" stroke-width="3"/>
+  <circle cx="105" cy="275" r="38" fill="#dbeafe" stroke="#3b82f6" stroke-width="3"/>
+  <text class="label" x="105" y="135">x₁</text>
+  <text class="label" x="105" y="275">x₂</text>
+
+  <rect class="gate" x="330" y="75" width="180" height="90" rx="20"/>
+  <rect class="gate" x="330" y="245" width="180" height="90" rx="20"/>
+  <text class="label" x="420" y="120">NAND</text>
+  <text class="label" x="420" y="290">OR</text>
+
+  <rect class="final" x="735" y="160" width="180" height="90" rx="20"/>
+  <text class="label" x="825" y="205">AND</text>
+
+  <circle cx="1010" cy="205" r="38" fill="#dcfce7" stroke="#22c55e" stroke-width="3"/>
+  <text class="label" x="1010" y="205">y</text>
+
+  <path class="wire" d="M145 130 C220 130, 250 115, 325 115"/>
+  <path class="wire" d="M138 155 C235 190, 235 265, 325 282"/>
+  <path class="wire" d="M138 255 C235 220, 235 145, 325 128"/>
+  <path class="wire" d="M145 280 C220 280, 250 295, 325 295"/>
+  <path class="wire" d="M515 120 C625 120, 630 185, 730 195"/>
+  <path class="wire" d="M515 290 C625 290, 630 225, 730 215"/>
+  <path class="wire" d="M920 205 L965 205"/>
+
+  <text class="small" x="592" y="112">s₁</text>
+  <text class="small" x="592" y="305">s₂</text>
+  <text class="layer" x="105" y="405">输入层</text>
+  <text class="layer" x="420" y="405">第一层：转换输入</text>
+  <text class="layer" x="825" y="405">第二层：完成判断</text>
+</svg>
